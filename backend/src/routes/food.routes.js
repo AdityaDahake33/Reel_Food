@@ -15,6 +15,9 @@ router.post('/',
     upload.single('video'), 
     foodController.createFood);
 
+// /api/food
+    router.get('/', foodController.getAllFoods);
+
 
 
 module.exports = router;
