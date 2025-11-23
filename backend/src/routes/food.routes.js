@@ -16,7 +16,9 @@ router.post('/',
     foodController.createFood);
 
 // /api/food
-    router.get('/', foodController.getAllFoods);
+    router.get('/', 
+        authMiddleware.authUserMiddleware, 
+        foodController.getFoodItems);
 
 
 
